@@ -6,7 +6,7 @@
 yarn cdk deploy
 ```
 
-構築出来たら作成済みの AWS マネコンから Cognito のユーザを作成する（`testUserGroup`グループに属するように設定する）
+構築出来たら作成済みの AWS マネコンから Cognito のユーザを作成する（`testUserGroup`)グループに属するように設定する）
 
 ## フロント
 
