@@ -10,6 +10,8 @@ yarn cdk deploy
 
 ## フロント
 
+`aws-exports.js`の設定値を cdk で構築した環境に合わせて更新する。
+
 ```
 yarn start
 ```

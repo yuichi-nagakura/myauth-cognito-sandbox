@@ -5,6 +5,7 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import { ListObjectsCommand, S3Client } from '@aws-sdk/client-s3';
 import { useEffect } from 'react';
+import { exportVars } from './aws-exports';
 
 function App({ signOut, user }) {
   console.log('user', user);
@@ -24,9 +25,10 @@ function App({ signOut, user }) {
         region: 'ap-northeast-1',
       });
 
+      const { bucket } = exportVars;
       const response = await s3Client.send(
         new ListObjectsCommand({
-          Bucket: 'cognitosandbox-cognitosandboxbucket453f14ae-1rjynvtwjcdyv',
+          Bucket: bucket,
         })
       );
       return response.Contents;
